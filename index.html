@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="screen">
+        <div id="playerSelectScreen">
+            <label>Enter Username</label>
+            <input type="text" id="playername"/>
+            <h4>Select Your Character</h4>
+            <div class="character-select">
+                <img src="gojo.jpg" alt="" onclick="character_select('Gojo')">
+                <img src="yuji.jpg" alt="" onclick="character_select('Yuji')">
+            </div>
+           <button onclick="selectPlayer()">Continue</button>
+            <!-- Add more players as needed -->
+        </div>
+        <div class="lobbyScreen">
+            <label>Enter Lobby Code</label>
+            <div class="join-lobby">
+                <input type="text">
+                <button onclick="selectPlayer()">Join</button>
+            </div>
+          
+            <button onclick="createLobby()">Create Lobby</button>
+               <h4>Join Lobbies</h4> 
+            <div class="lobby-select">
+
+            </div>
+        </div>
+        <!-- <div class="player-ready">
+             <h2>Players</h2> 
+            <div class="current-players">
+
+            </div>
+        </div> -->
+        <div class="game">
+            <div class="game-ui">
+                <div class="player-health-bar">
+                    <div class="player-health"></div>
+                </div>
+                <div class="timer">
+                    10
+                </div>
+                <div class="enemy-health-bar">
+                    <div class="enemy-health"></div>
+                </div>
+            </div>
+            <div class="match-result">
+    
+            </div>
+            <label for="playerNumber">Choose a player number:</label>
+            <!-- <input type="number" id="playerNumber" name="playerNumber" min="1" max="10"> -->
+            <div id="playerNumber">1</div>
+            <button onclick="setPlayerNumber()">Set Player Number</button>
+    
+            <canvas class="game-canvas">
+    
+            </canvas>
+        </div>
+       
+
+    </div>
+    <script src="utils.js"></script>
+    <script src="./classes/sprites.js"></script>
+    <script src="./classes/spriteObject.js"></script>
+    <script src="./classes/player.js"></script>
+    <script src="./classes/Gojo.js"></script>
+    <script src="./classes/projectile.js"></script>
+    <script src="./classes/LapseBlue.js"></script>
+    <script src="./classes/reversalRed.js"></script>
+
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+   
+    
+</body>
+</html>

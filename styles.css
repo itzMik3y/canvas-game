@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+.game{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+.health-bar{
+    /* position: absolute; */
+    color:yellow;
+    height: 50px;
+    width: 100px;
+}
+.game-ui{
+    width: 50%;
+    height:10% ;
+    border: 1px solid black;
+    /* background-color: red; */
+    z-index: 10;
+    position: absolute;
+    top:8%;
+    display: flex;
+    align-items: center;
+}
+.timer{
+    width: 20%;
+    height: 100%;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.player-health-bar{
+    width: 40%;
+    height: 75%;
+    background-color: blue;
+
+}
+.enemy-health-bar{
+    width: 40%;
+    height: 75%;
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-end; 
+
+}
+
+.enemy-health{
+    height: 100%;
+    width: 100%;
+    background-color: green;
+   
+
+}
+.player-health{
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.match-result{
+    z-index: 20;
+    position: absolute;
+    height: 10%;
+    width:50%;
+    background-color: coral;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+#playerSelectScreen{
+    padding-top: 5%;
+    width: 50%;
+    height: 60%;
+    display:flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap:5%;
+    flex-direction: column;
+    border: 1px solid black;
+}
+#playerSelectScreen input{
+    width: 30%;
+    height: 2rem;
+    text-align: center;
+}
+.character-select{
+    /* aspect-ratio: 1/1; */
+    width: 50%;
+    border: 1px solid black;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.character-select img{
+    width: 25%;          /* or any desired width */
+    aspect-ratio: 1 / 1; /* ensures height is always equal to width */
+    border-radius: 50%;border-radius: 50%;
+    
+}
+#playerSelectScreen button{
+    width: 30%;
+    height: 8%;
+}
+
+.lobbyScreen{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 50%;
+    height: 75%;
+    display:none;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap:5%;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.lobbyScreen button{
+    width: 30%;
+    height: 8%;
+}
+.lobby-select{
+    width: 70%;
+    border: 1px solid black;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap:5px; */
+    overflow-y:auto ;
+}
+.lobby-select::-webkit-scrollbar{
+    display: none;
+}
+.lobby{
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.lobby button{
+    height: 50%;
+    width: 100px;
+}
+.join-lobby{
+    width: 50%;
+    /* border: 1px solid black; */
+    height: 9%;
+    display: flex;
+    gap:10px;
+}
+
+.join-lobby input{
+    width: 70%;
+    height: 2rem;
+    text-align: center;
+}
+
+.join-lobby button{
+    width: 30%;
+    height: 2rem;
+}
+
+.player-ready{
+    padding-top: 3%;
+    width: 50%;
+    height: 70%;
+    display:flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap:5%;
+    flex-direction: column;
+    border: 1px solid black;
+
+}
+.current-players{
+    width: 70%;
+    border: 1px solid black;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap:5px; */
+    overflow-y:auto ;
+}
