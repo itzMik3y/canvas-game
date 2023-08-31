@@ -18,7 +18,7 @@ class Gojo extends Player {
         this.framesHold = 30;
         this.loopAnimation = false;
         this.animationScales=animationScales
-
+        this.currentAnimation=[]
 
         // this.images = imageSrcs.map(src => {
         //     const img = new Image();
@@ -161,6 +161,7 @@ class Gojo extends Player {
     //     }
     // }
     switchAnimation(animation, direction) {
+        // this.currentAnimation=[animation,direction]
             // this.scale=this.animationScales[animation]
         
         // console.log(this.animations[direction]['run'])

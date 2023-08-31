@@ -342,6 +342,7 @@ function getOppositeKey(receivedKey) {
 function updateCharacter(character, data) {
     character.position=data.position
     character.offset=data.offset
+    // if(JSON.stringify(data.currentAnimation) != JSON.stringify(character.currentAnimation))
     character.switchAnimation(data.currentAnimation[0],data.currentAnimation[1])
 }
 

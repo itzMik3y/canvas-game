@@ -107,6 +107,7 @@ io.on('connection', (socket) => {
             currentAnimation:[],
             direction:'right'
             }]},
+            previousGameState:null,
             playerCount: 1 
             // ... any other lobby data
         };
@@ -274,7 +275,24 @@ function findPlayerBySocketID(socketID) {
     return null;  // Return null if the player is not found
 }
 
+function getGameStateDelta(currentGameState, previousGameState) {
+    if (!previousGameState) return currentGameState;
 
+    const delta = { players: [] };
+    for (let i = 0; i < currentGameState.players.length; i++) {
+        const currentPlayer = currentGameState.players[i];
+        const previousPlayer = previousGameState.players[i];
+
+        const playerDelta = {};
+        for (const key in currentPlayer) {
+            if (JSON.stringify(currentPlayer[key]) !== JSON.stringify(previousPlayer[key])) {
+                playerDelta[key] = currentPlayer[key];
+            }
+        }
+        delta.players.push(playerDelta);
+    }
+    return delta;
+}
 server.listen(8080, () => {
     console.log('Server started on http://localhost:8080');
 });
